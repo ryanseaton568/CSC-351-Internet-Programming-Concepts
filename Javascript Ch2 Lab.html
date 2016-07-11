@@ -1,0 +1,79 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<title> Joseph Seaton </title>
+		<meta charset="UTF-8">
+		<script>
+	function allList(){
+	var days = new Array();
+	
+		for (var i = 0; i < 30; i++) {
+			if(((i+1)%7)==0){
+				days[i] = 0;
+			}//end if
+			else{
+				days[i] = Math.floor(Math.random() * 3001 + 7000);
+			}//end else
+		}//end for
+		
+		for (var z = 0; z < days.length; z++){  //change counter
+		var theDay = z + 1 ;  //the day is the z index +1
+		var id = "item" + z;
+		var li = document.getElementById(id);
+		if(days[z] < 8500 && days[z] > 7000){
+			li.innerHTML = "Day " + theDay + ". The Stock is " + days[z] + ". The stock is below the trading target.";
+			}//end if
+		else if(days[z] > 8500){
+			li.innerHTML = "Day " + theDay + ". The Stock is " + days[z] + ". The stock is above the trading target.";
+			}//end else if
+		else if(days[z] == 8500){
+			li.innerHTML = "Day " + theDay + ". The Stock is " + days[z] + ". The stock is exactly at the trading target.";
+			}//end else if
+		else{
+			li.innerHTML = "Day " + theDay + ". The Stock is " + days[z] + ". The stock market is closed today.";
+			}//end else
+		}//end for
+	}//end function
+	window.onload = allList;
+	</script>
+	</head>
+	<body>
+	<body style="background-color:lightgrey">
+	<h3> Shares Traded </h3>
+	<ul id = "items">
+		<li id = "item0"></li>
+		<li id = "item1"></li>
+		<li id = "item2"></li>
+		<li id = "item3"></li>
+		<li id = "item4"></li>
+		<li id = "item5"></li>
+		<li id = "item6"></li>
+		<li id = "item7"></li>
+		<li id = "item8"></li>
+		<li id = "item9"></li>
+		<li id = "item10"></li>
+		<li id = "item11"></li>
+		<li id = "item12"></li>
+		<li id = "item13"></li>
+		<li id = "item14"></li>
+		<li id = "item15"></li>
+		<li id = "item16"></li>
+		<li id = "item17"></li>
+		<li id = "item18"></li>
+		<li id = "item19"></li>
+		<li id = "item20"></li>
+		<li id = "item21"></li>
+		<li id = "item22"></li>
+		<li id = "item23"></li>
+		<li id = "item24"></li>
+		<li id = "item25"></li>
+		<li id = "item26"></li>
+		<li id = "item27"></li>
+		<li id = "item28"></li>
+		<li id = "item29"></li>
+	</ul>
+	<h4> Joseph Seaton </h4>
+	
+	</body>
+</html>
